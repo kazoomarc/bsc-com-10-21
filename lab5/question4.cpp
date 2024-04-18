@@ -1,6 +1,5 @@
 #include<iostream>
 #include <limits>
-// #include<cstdio> //for printf
 using namespace std;
 
 int main(){
