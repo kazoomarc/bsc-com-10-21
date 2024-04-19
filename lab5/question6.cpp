@@ -1,11 +1,12 @@
 #include<iostream>
 #include<fstream>
+#include<string>
 using namespace std;
 
-int vowelsCount();
-int wordsCount();
-int reverseWords();
-string capitalizeSecond();
+int vowelsCount(string str);
+int wordsCount(string str);
+string reverseWords(string str);
+string capitalizeSecond(string str);
 
 
 int main(){
@@ -18,7 +19,8 @@ int main(){
 
     if (myFile.is_open()){
         getline(myFile, fileData);
-        cout<<fileData<<endl;
+        cout<<"og message: "<< fileData<<endl;
+        cout<<"Number of vowels: "<<vowelsCount(fileData)<<endl;
     }
 
     //calculate number of vowels > output
@@ -29,4 +31,24 @@ int main(){
 
     //capitalize second letter of each word > output
     return 0;
+}
+
+int vowelsCount(string str){
+    int counter = 0;
+
+    for(int i = 0; i < str.length();i++){
+        switch(toupper(str[i])){
+            case 'A':
+            case 'E':
+            case 'I':
+            case 'O':
+            case 'U':
+                counter++;
+                break;
+            default:
+                break;
+        }
+    }
+
+    return counter;
 }
