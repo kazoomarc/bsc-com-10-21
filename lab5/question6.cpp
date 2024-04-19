@@ -8,7 +8,7 @@ int wordsCount(string str);
 string reverseWords(string str);
 string capitalizeSecond(string str);
 
-
+int wordsCount2(string str);
 int main(){
 
     //open text file
@@ -21,6 +21,8 @@ int main(){
         getline(myFile, fileData);
         cout<<"og message: "<< fileData<<endl;
         cout<<"Number of vowels: "<<vowelsCount(fileData)<<endl;
+        cout<<"Number of words: "<<wordsCount(fileData)<<endl;
+
     }
 
     //calculate number of vowels > output
@@ -47,6 +49,38 @@ int vowelsCount(string str){
                 break;
             default:
                 break;
+        }
+    }
+
+    return counter;
+}
+
+// int wordsCount(string str){
+//     int counter = 0;
+
+//     for(int i = 0; i < str.length();i++){
+//         if(str[i] == ' '){
+//             counter++;
+//             while(str[i + 1] == ' ') i++;
+//         }
+//     }
+
+//     return counter + 1;
+// }
+
+int wordsCount(string str){
+    int counter = 0;
+
+    bool flag = false;
+
+    for(int i = 0; i < str.length();i++){
+        if(!(str[i] == ' ') && flag == false){
+            flag = true;
+            counter++;
+        }
+
+        if(str[i] == ' '){
+            flag = false;
         }
     }
 
