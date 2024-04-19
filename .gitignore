@@ -1,2 +1,4 @@
 # compiled files
 *.exe
+tasks.json
+launch.json

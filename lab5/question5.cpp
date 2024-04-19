@@ -9,7 +9,9 @@ double areaRectangle(double length, double width);
 double areaTriangle(double base, double height);
 
 int main(){
-    while(true){int input;
+    
+    while(true){
+        int input;
         menu();
 
         cin>>input;
@@ -46,7 +48,7 @@ int main(){
             cout<<"Area is "<<areaTriangle(base, height);
         }
 
-        if(input==4) break;
+        if(input==4) break; 
     }
 
     return 0;

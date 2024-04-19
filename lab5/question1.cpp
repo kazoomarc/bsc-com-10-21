@@ -10,7 +10,7 @@ int main(){
 
     // generate rand between 0 - 11
     int daysUntilExpiration = rand() % 12;
-    cout<<daysUntilExpiration<<endl; //output random number generated
+    // cout<<daysUntilExpiration<<endl; //output random number generated
 
     if(daysUntilExpiration>10){
         cout<<"You have an active subscription."<<endl;
