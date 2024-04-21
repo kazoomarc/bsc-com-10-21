@@ -112,18 +112,16 @@ string reverseWords(string str){
 string capitalizeSecond(string str){
     string result = "";
 
-    bool flag = false;
+    bool flag = true;
     bool flag_two = false;
-    bool shouldNotSkip = true;
 
 
     for(int i = 0; i < str.length();i++){
 
 
-        if(str[i] != ' ' && flag == false){
-            flag = true;
+        if(str[i] != ' ' && flag){
+            flag = false;
             result += str[i];
-            shouldNotSkip = false;
             flag_two = true;
             continue;
         }
@@ -135,7 +133,7 @@ string capitalizeSecond(string str){
         }
 
         if(str[i] == ' '){
-            flag = false;
+            flag = true;
         }
    
         result += str[i];    
