@@ -28,7 +28,8 @@ int main(){
         cout<<"og message: "<< fileData<<endl;
         cout<<"Number of vowels: "<<vowelsCount(fileData)<<endl;
         cout<<"Number of words: "<<wordsCount(fileData)<<endl;
-        cout<<"Number of words: "<<reverseWords(fileData)<<endl;
+        cout<<"reverse words: "<<reverseWords(fileData)<<endl;
+        cout<<"Capitalize second: "<<capitalizeSecond(fileData)<<endl;
     }
 
     //capitalize second letter of each word > output
@@ -112,18 +113,33 @@ string capitalizeSecond(string str){
     string result = "";
 
     bool flag = false;
+    bool flag_two = false;
+    bool shouldNotSkip = true;
+
 
     for(int i = 0; i < str.length();i++){
+
+
         if(str[i] != ' ' && flag == false){
             flag = true;
-            // counter++;
+            result += str[i];
+            shouldNotSkip = false;
+            flag_two = true;
+            continue;
+        }
+
+        if(flag_two && str[i] != ' '){
+            result += toupper(str[i]);
+            flag_two = false;
+            continue;
         }
 
         if(str[i] == ' '){
             flag = false;
         }
+   
+        result += str[i];    
     }
 
-    return "";
+    return result;
 }
-
