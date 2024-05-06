@@ -1,5 +1,6 @@
 # compiled files
 *.exe
+*.o
 tasks.json
 launch.json
 antilab/

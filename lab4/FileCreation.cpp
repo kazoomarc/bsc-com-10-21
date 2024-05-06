@@ -1,21 +1,15 @@
 #include<iostream>
 #include<fstream>
-#include<string>
 
 using namespace std;
 
 int main(){
-    //create and open a text file
-    string line;
-    fstream myFile;
-    myFile.open("example.txt");
+    // create and open a text file
 
-    if (myFile.is_open()){
-        while(getline(myFile,line)){
-            cout << line <<"\n";
-        }
-        myFile.close();
-    }
+    ofstream MyFile("exampleFile.txt");
+
+    //close the file
+    MyFile.close();
 
     return 0;
 }
