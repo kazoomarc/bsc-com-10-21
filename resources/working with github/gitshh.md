@@ -9,7 +9,16 @@ git clone https://github.com/kazoomarc/mdl.git
 ## repo with stuff offline to empty repo online
 
 ```bash
+git init
+git add .
+git commit -m "Initial commit"
+```
 
+create the online repo then add the code to it like this
+
+```BASH
+git remote add origin https://github.com/kazoomarc/jssh.git
+git push -u origin main
 ```
 
 ## Made a repo with stuff online and connect to offline repo with stuff

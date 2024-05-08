@@ -1,6 +1,7 @@
 # compiled files
 *.exe
 *.o
+*.cbp
 tasks.json
 launch.json
 antilab/
