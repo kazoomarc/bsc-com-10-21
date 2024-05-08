@@ -35,3 +35,29 @@ npm install react-router-dom
 create folder within the `src` folder called `components`
 create routes inside `components` eg `home.js`,
 create `routes.js` in `<app-name>/src/`
+
+in `routes.js` create a router component and export it
+
+```jsx
+import { createBrowserRouter } from "react-router-dom";
+import Home from "./components/home";
+import Login from "./components/login";
+import App from "./App";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "/home",
+    element: <Home />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+]);
+
+export default router;
+```
