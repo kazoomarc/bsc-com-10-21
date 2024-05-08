@@ -29,3 +29,9 @@ npx tailwindcss init
 ```bash
 npm install react-router-dom
 ```
+
+## Routing with DOM
+
+create folder within the `src` folder called `components`
+create routes inside `components` eg `home.js`,
+create `routes.js` in `<app-name>/src/`
