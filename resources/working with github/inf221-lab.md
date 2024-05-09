@@ -61,3 +61,17 @@ const router = createBrowserRouter([
 
 export default router;
 ```
+
+After this edit `<app-name>/src/index.js` on the render to be rendering `<RouterProvider  router={router}></RouterProvider>` and with this their is need to import these two as shown
+
+```jsx
+import { RouterProvider } from "react-router-dom";
+import router from "./routes";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <RouterProvider router={router}></RouterProvider>
+  </React.StrictMode>
+);
+```
