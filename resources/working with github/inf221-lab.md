@@ -39,22 +39,22 @@ create `routes.js` in `<app-name>/src/`
 in `routes.js` create a router component and export it
 
 ```jsx
-import { createBrowserRouter } from "react-router-dom";
-import Home from "./components/home";
-import Login from "./components/login";
-import App from "./App";
+import { createBrowserRouter } from 'react-router-dom';
+import Home from './components/home';
+import Login from './components/login';
+import App from './App';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <App />,
   },
   {
-    path: "/home",
+    path: '/home',
     element: <Home />,
   },
   {
-    path: "/login",
+    path: '/login',
     element: <Login />,
   },
 ]);
@@ -65,13 +65,15 @@ export default router;
 After this edit `<app-name>/src/index.js` on the render to be rendering `<RouterProvider  router={router}></RouterProvider>` and with this their is need to import these two as shown
 
 ```jsx
-import { RouterProvider } from "react-router-dom";
-import router from "./routes";
+import { RouterProvider } from 'react-router-dom';
+import router from './routes';
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <RouterProvider router={router}></RouterProvider>
   </React.StrictMode>
 );
 ```
+
+////addding link to jsx via a react-router tag

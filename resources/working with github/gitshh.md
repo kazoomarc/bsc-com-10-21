@@ -1,4 +1,4 @@
-#Git shhh
+# Git shhh
 
 ## Cloning a repo
 
@@ -33,3 +33,16 @@ git commit -m "Initial commit"
 git branch --set-upstream-to=origin/main
 git pull origin main --allow-unrelated-histories
 ```
+
+## collabolating
+
+`git pull origin main` - fetching all the code from the remote into the local
+
+```bash
+git checkout -b <branch-name>
+git add .
+git commit -m "{message here}"
+git push origin <branch-name>
+```
+
+## contributing to opensource
