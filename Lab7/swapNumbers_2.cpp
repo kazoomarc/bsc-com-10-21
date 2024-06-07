@@ -1,14 +1,13 @@
 #include<iostream>
 using namespace std;
 
-// swap numbers with references
-void swapNumbers(int& a, int& b) {
-    int temp = a;
-    a = b;
-    b = temp;
+
+// swap numbers with pointers
+void swapNumbers(int* a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
 }
-
-
 
 int main() {
 
@@ -19,7 +18,7 @@ int main() {
     cout << "varB before swap: " << varB << endl; //varb is 100
 
 
-    swapNumbers(varA, varB);
+    swapNumbers(&varA, &varB);
 
     cout << "varA after swap: " << varA << endl;
     cout << "varB after swap: " << varB << endl;
